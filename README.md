@@ -1,4 +1,4 @@
-# loginform
+# Login Form Layout
 A login form with Semantic-ui
 
 ## Features 
