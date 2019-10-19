@@ -1,10 +1,12 @@
 # Login Form Layout
-A login form with Semantic-ui
+A login form based on Bootstrap & Semantic Frameworks
+Icons Based on Fontawesome Framework
 
 ## Features 
 - **Its responsive!** So, it looks good on all mobiles, tablets, laptops and desktops with any orientation.
 
 ![Gif of Page](/images/screenshot01.jpg?raw=true "Normal view")
+![Gif of Page](/images/screenshot02.jpg?raw=true "Normal view")
 
 ## Folders
 
