@@ -1,110 +1,213 @@
 <!doctype html>
 <html lang="en" dir="ltr">
-  <head dir="ltr">
-    <!-- Title -->
-    <title>Wonder Web - Modal Login Form</title>
-    
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Semantic-ui CSS -->
-    <link rel="stylesheet" href="css/semantic.min.css">
+    <head dir="ltr">
+        <!-- Title -->
+        <title>Wonder Web - Modal Login Form</title>
 
-    <!-- JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-  </head>
-  <body>
-  
-    <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#loginform">:: Login Form ::</button>
-    
-    <div id="loginform" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-          <!-- Modal content-->
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h4 class="modal-title">Loging Form Title</h4>
-                  <div class="close" data-dismiss="modal">
-                    <i class="fa fa-close"></i>
-                  </div>
-              </div>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Semantic-ui CSS -->
+        <link rel="stylesheet" href="css/semantic.min.css">
+        <!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="css/fontawesome.min.css">
 
-              <div class="modal-body" id="login_body">
-                <div class="ui middle aligned center aligned grid">
-                    <div class="column">
-                        <h2 class="ui blue image header">
-                          <img class="image" src="images/logo.jpg">
-                          <div class="content">Login Form</div>
-                        </h2>
+        <!-- JavaScript -->
+        <!-- jQuery first, Popper, Bootstrap, then Semantic -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    </head>
+    <body>
+        
+        <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#bootstrap">:: Bootstrap Login Form ::</button>
 
-                        <form class="ui large form">
-                          <div class="ui segment">
+        <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#semantic">:: Semantic Login Form ::</button>
 
-                              <div class="field">
-                                <div class="ui left icon input">
-                                  <!--<i class="users icon"></i>-->
-                                  <input type="text" name="username" placeholder="Username" required="required">
-                                </div>
-                              </div>
-                              <div class="field">
-                                <div class="ui left icon input">
-                                  <!--<i class="lock icon"></i>-->
-                                  <input type="password" name="password" placeholder="Password" required="required">
-                                </div>
-                              </div>
+        <div id="bootstrap" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Bootstrap Title</h5>
+                        <div class="close" data-dismiss="modal">
+                            <i class="fa fa-close"></i>
+                        </div>
+                    </div>
 
-                              <div class="form-group">
-                                  <button type="submit" id="submit" class="ui fluid primary button submit">:: Login ::</button>
-                              </div>
-                          </div>
-                        </form>
+                    <div class="modal-body" id="bootstrap_login_body">
+                        <div class="card">
+                            <div class="card-header">
+                                <img class="image" src="images/logo.jpg">
+                                Login Form
+                            </div>
 
-                        <div class="ui message">
-                        Forgot Password?<button class="btn btn-link" onclick="$('#login_body').hide();$('#retrieve_body').show();">Click Here</button>
-                      </div>
-                    </div>    
+                            <div class="card-body">
+                                <form class="form contact">
+                                    <div class="form-group">
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
+                                            </div>
+                                            
+                                            <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i class="fa fa-key text-info"></i></div>
+                                            </div>
+                                            
+                                            <input type="password" class="form-control" id="inputpassword" name="password" placeholder="Password" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button type="submit" id="submit" class="btn btn-primary submit"><i class="fa fa-lock"></i> :: Login ::</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <p class="card-text m-1">
+                                Forgot Password?<button class="btn btn-link" onclick="$('#bootstrap_login_body').hide();$('#bootstrap_retrieve_body').show();">Click Here</button>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="modal modal-body hide" id="bootstrap_retrieve_body">
+                        <div class="card">
+                            <div class="card-header">
+                                <img class="image" src="images/logo.jpg">
+                                Reset Password Form
+                            </div>
+
+                            <div class="card-body">
+                                <form class="form contact">
+                                    <div class="form-group">
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
+                                            </div>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="E-Mail" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button type="submit" id="submit" class="btn btn-primary submit"><i class="fa fa-undo"></i> :: Rest Password ::</button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                            <p class="card-text m-1">
+                                Having Account?<button class="btn btn-link"  onclick="$('#bootstrap_login_body').show();$('#bootstrap_retrieve_body').hide();">Click Here</button>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <div class="col-md-6 col-6 m-0 p-0">
+                            Designed By WonderWeb.org
+                        </div>
+                        <div class="col-md-6 m-0 p-0">
+                            <a href="#" class="">Copyrights to WonderWeb.org</a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-
-              <div class="modal modal-body hide" id="retrieve_body">
-                <div class="ui middle aligned center aligned grid">
-                    <div class="column">
-                        <h2 class="ui blue image header">
-                          <img class="image" src="images/logo.jpg">
-                          <div class="content">Reset Password Form</div>
-                        </h2>
-
-                        <form class="ui large form">
-                          <div class="ui segment">
-
-                              <div class="field">
-                                <div class="ui left icon input">
-                                  <!--<i class="users icon"></i>-->
-                                  <input type="text" name="email" placeholder="E-Mail" required="required">
-                                </div>
-                              </div>
-
-                              <div class="form-group">
-                                  <button type="submit" id="submit" class="ui primary button submit">:: Reset Password ::</button>
-                              </div>
-                          </div>
-                        </form>
-
-                        <div class="ui message">
-                        Having Account?<button class="btn btn-link"  onclick="$('#login_body').show();$('#retrieve_body').hide();">Click Here</button>
-                      </div>
-                    </div>    
-                </div>
-              </div>
-
-              <div class="modal-footer"></div>
-          </div>
+            </div>
         </div>
-    </div>
-  </body>
+
+        <div id="semantic" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Semantic Title</h4>
+                        <div class="close" data-dismiss="modal">
+                            <i class="fa fa-close"></i>
+                        </div>
+                    </div>
+
+                    <div class="modal-body" id="semantic_login_body">
+                        <div class="ui middle aligned center aligned grid">
+                            <div class="column">
+                                <h2 class="ui blue image header">
+                                    <img class="image" src="images/logo.jpg">
+                                    Login Form
+                                </h2>
+
+                                <form class="ui large form">
+                                    <div class="ui segment">
+
+                                        <div class="field">
+                                            <div class="ui left icon input">
+                                                <input type="text" name="username" placeholder="Username" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <div class="ui left icon input">
+                                                <input type="password" name="password" placeholder="Password" required="required">
+                                            </div>
+                                        </div>
+
+                                        <div class="field">
+                                            <button type="submit" id="submit" class="ui fluid primary button submit">:: Login ::</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <div class="ui message">
+                                    Forgot Password?<button class="btn btn-link" onclick="$('#semantic_login_body').hide();$('#semantic_retrieve_body').show();">Click Here</button>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+
+                    <div class="modal modal-body hide" id="semantic_retrieve_body">
+                        <div class="ui middle aligned center aligned grid">
+                            <div class="column">
+                                <h2 class="ui blue image header">
+                                    <img class="image" src="images/logo.jpg">
+                                    Reset Password Form
+                                </h2>
+
+                                <form class="ui large form">
+                                    <div class="ui segment">
+
+                                        <div class="field">
+                                            <div class="ui left icon input">
+                                                <input type="text" name="email" placeholder="E-Mail" required="required">
+                                            </div>
+                                        </div>
+
+                                        <div class="field">
+                                            <button type="submit" id="submit" class="ui fluid primary button submit">:: Reset Password ::</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <div class="ui message">
+                                    Having Account?<button class="btn btn-link"  onclick="$('#semantic_login_body').show();$('#semantic_retrieve_body').hide();">Click Here</button>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <div class="col-md-6 col-6 m-0 p-0">
+                            Designed By WonderWeb.org
+                        </div>
+                        <div class="col-md-6 m-0 p-0">
+                            <a href="#" class="">Copyrights to WonderWeb.org</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
